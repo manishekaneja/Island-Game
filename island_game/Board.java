@@ -12,7 +12,24 @@ import java.util.LinkedList;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class Board extends JPanel implements Utilies {
+import com.collecting_items.Apple;
+import com.collecting_items.Banana;
+import com.collecting_items.Jackpot;
+import com.obst.Bird;
+import com.obst.Fire;
+import com.obst.Liz;
+import com.obst.Rock;
+import com.obst.Snail;
+import com.obst.Stone;
+import com.player_items.EnergyBar;
+import com.player_items.Hammer;
+import com.player_items.Player;
+import com.res.CollectingItems;
+import com.res.Enemy;
+import com.res.Sprite;
+import com.res.Utilities;
+
+public class Board extends JPanel implements Utilities {
 
 	Graphics2D tD;
 	private static final long serialVersionUID = 2665453087591530261L;
@@ -128,7 +145,7 @@ public class Board extends JPanel implements Utilies {
 							if (ham) {
 								hamshow = true;
 								ham = false;
-								player.img = player.getThrowImg();
+								player.setImg(player.getThrowImg());
 								hammer.add(new Hammer(player.getX() + (player.getWidth() / 2),
 										player.getY() + (player.getHeight() / 2)));
 							}
@@ -165,7 +182,7 @@ public class Board extends JPanel implements Utilies {
 		 */
 		timer = new Timer(13, (e) -> {
 			repaint();
-			if (Sprite.counter % 300 == 0 && energyLevel > 0) {
+			if (Sprite.getCounter() % 300 == 0 && energyLevel > 0) {
 				energyLevel--;
 			}
 			if (energyLevel == 0) {
@@ -175,7 +192,7 @@ public class Board extends JPanel implements Utilies {
 
 		});
 		animate = new Timer(13, (e) -> {
-			Sprite.counter++;
+			Sprite.setCounter(Sprite.getCounter() + 1);
 
 		});
 		this.addKeyListener(new KeyAdapter() {
@@ -447,7 +464,7 @@ public class Board extends JPanel implements Utilies {
 		}
 		for (Enemy s : enemy) {
 			if (s.getX() < BOARD_WIDTH && s.getX() > 0 && isCollision(s, player)) {
-				if (!s.gone) {
+				if (!s.isGone()) {
 					playable = false;
 					gameOver();
 				}
