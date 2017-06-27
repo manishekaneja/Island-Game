@@ -1,2 +1,2 @@
 # Island-Game
-A small Game
+An Arcade Game built using Java
