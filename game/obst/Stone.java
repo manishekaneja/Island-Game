@@ -1,9 +1,9 @@
-package com.obst;
+package game.obst;
 
 import javax.swing.ImageIcon;
 
-import com.res.Sprite;
-import com.res.Utilities;
+import game.res.Sprite;
+import game.res.Utilities;
 
 public class Stone extends Sprite implements Utilities {
 

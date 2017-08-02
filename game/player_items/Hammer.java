@@ -1,11 +1,11 @@
-package com.player_items;
+package game.player_items;
 
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-import com.res.Sprite;
-import com.res.Utilities;
+import game.res.Sprite;
+import game.res.Utilities;
 
 public class Hammer extends Sprite implements Utilities {
 	private int select = 1;

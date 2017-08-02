@@ -1,9 +1,9 @@
-package com.collecting_items;
+package game.collecting_items;
 
 import javax.swing.ImageIcon;
 
-import com.res.CollectingItems;
-import com.res.Utilities;
+import game.res.CollectingItems;
+import game.res.Utilities;
 
 public class Apple extends CollectingItems implements Utilities {
 	public Apple(int x, int y) {

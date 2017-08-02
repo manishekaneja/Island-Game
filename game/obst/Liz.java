@@ -1,9 +1,9 @@
-package com.obst;
+package game.obst;
 
 import javax.swing.ImageIcon;
 
-import com.res.Enemy;
-import com.res.Utilities;
+import game.res.Enemy;
+import game.res.Utilities;
 
 public class Liz extends Enemy implements Utilities {
 	public Liz(int x, int y) {

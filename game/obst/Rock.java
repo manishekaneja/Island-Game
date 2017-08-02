@@ -1,9 +1,9 @@
-package com.obst;
+package game.obst;
 
 import javax.swing.ImageIcon;
 
-import com.res.Enemy;
-import com.res.Utilities;
+import game.res.Enemy;
+import game.res.Utilities;
 
 public class Rock extends Enemy implements Utilities {
 	public Rock(int x, int y) {

@@ -1,4 +1,4 @@
-package com.res;
+package game.res;
 
 import java.awt.Image;
 

@@ -1,4 +1,4 @@
-package com.res;
+package game.res;
 
 public abstract class CollectingItems extends Sprite implements Utilities {
 /**

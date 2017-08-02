@@ -1,9 +1,9 @@
-package com.obst;
+package game.obst;
 
 import javax.swing.ImageIcon;
 
-import com.res.Enemy;
-import com.res.Utilities;
+import game.res.Enemy;
+import game.res.Utilities;
 
 public class Snail extends Enemy implements Utilities {
 	

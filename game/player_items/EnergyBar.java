@@ -1,9 +1,9 @@
-package com.player_items;
+package game.player_items;
 
 import javax.swing.ImageIcon;
 
-import com.res.Sprite;
-import com.res.Utilities;
+import game.res.Sprite;
+import game.res.Utilities;
 
 public class EnergyBar extends Sprite implements Utilities {
 	public EnergyBar(int x, int y) {
